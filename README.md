@@ -94,6 +94,28 @@ Tyler, 2024. unsplash. [Online]
 Available at: https://unsplash.com/photos/a-small-dog-with-a-harness-on-walking-in-the-grass-KmDXeBsCgeQ
 [Accessed 25 August 2025].
 
+Part 2 of practical assignment
+
+Question 2.1 – Create an External Stylesheet
+I created an external CSS file to separate my styling from the HTML structure. This makes my code cleaner, easier to maintain, and more professional. The stylesheet is linked to the HTML document to apply the styles.
+
+Question 2.2 – Establish a Base Style
+I defined global styles using the body selector. This included setting the background color, font family, font size, and removing default margins and padding. These base styles help ensure a consistent layout and appearance across the entire website.
+
+Question 2.3 – Apply Typography Styles
+I applied various text styling properties to enhance readability and design, including font family, font size, font weight, line height, and letter spacing. These styles were added to headings and paragraphs to improve visual hierarchy and structure.
+
+Question 2.4 – Create a Layout Structure
+I used CSS Grid and Flexbox to build the layout of the page. The grid system allowed me to create a responsive section for services, while Flexbox was used to align and space items horizontally. This ensures that the layout adapts well to different screen sizes and devices.
+
+Question 2.5 – Apply Visual Styles
+I applied a variety of visual enhancements to elements throughout the site. These include background colors, borders, box shadows, rounded corners, and interactive effects like hover, focus, and active states. These styles improve the look and feel of the website and help make it more engaging and user-friendly.
+
+
+
+
+
+
 
 
 
