@@ -118,3 +118,65 @@ input[type="text"]:active {
     margin: 0 auto;
     text-align: center;
 }
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 1em; /* Slightly smaller font for small screens */
+        padding: 10px;
+    }
+    h1 {
+        font-size: x-large; /* Keep or slightly reduce size if needed */
+        line-height: 40px;
+    }
+    h2 {
+        font-size: large;
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+    }
+    /* Make images full width for small screens */
+    img {
+        width: 80%;
+    }
+    /* Adjust input width for smaller screens */
+    input[type="text"] {
+        width: 80%;
+    }
+    /* Stack grid items vertically */
+    .services-grid {
+        grid-template-columns: 1fr; /* single column on small screens */
+    }
+    /* Flex container becomes column layout for small screens */
+    .flex-container {
+        flex-direction: column;
+    }
+    /* Contact info expands to full width */
+    .contact-info {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+/* For mobile devices  */
+@media (max-width: 480px) {
+    h1 {
+        font-size: large; /* Smaller heading sizes */
+    }
+    h2 {
+        font-size: medium;
+    }
+    /* Further reduce padding and spacing if needed */
+    li {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    /* Make inputs and images even smaller if necessary */
+    input[type="text"] {
+        width: 90%;
+        padding: 8px;
+    }
+    /* Keep grid in a single column */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
