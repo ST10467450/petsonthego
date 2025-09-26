@@ -122,11 +122,11 @@ input[type="text"]:active {
 /* For tablets and smaller screens */
 @media (max-width: 768px) {
     body {
-        font-size: 1em; /* Slightly smaller font for small screens */
+        font-size: 1em; 
         padding: 10px;
     }
     h1 {
-        font-size: x-large; /* Keep or slightly reduce size if needed */
+        font-size: x-large; 
         line-height: 40px;
     }
     h2 {
@@ -144,7 +144,7 @@ input[type="text"]:active {
     }
     /* Stack grid items vertically */
     .services-grid {
-        grid-template-columns: 1fr; /* single column on small screens */
+        grid-template-columns: 1fr;
     }
     /* Flex container becomes column layout for small screens */
     .flex-container {
@@ -158,10 +158,9 @@ input[type="text"]:active {
 }
 
 /* For mobile devices  */
-@media (max-width: 480px) {
+@media(max-width: 480px) {
     h1 {
-        font-size: large; /* Smaller heading sizes */
-    }
+        font-size: large; }
     h2 {
         font-size: medium;
     }
