@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html>
-   <nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETSONTHEGO | Enquiry</title>
-    <link rel="stylesheet" href="css/mystyle.css"
-   </nav>
-   <!--navigation bar-->
-   <a href="index.html">Home</a>
-        <a href="aboutus.html">About us</a>
-       <a href="enquiry.html">Enquiry</a>
-        <a href="contact.html">Contacts</a>
-        <a href="services.html">Services</a>
-   <main>
-    <h1>Enquiry</h1>
-    <!--image-->
-    <img src="images/dog3.jpg" width="50%">
-    <!--services-->
-    <p>Name of the owner:</p><input type="text">
-    <p>Name of the pet:</p><input type="text">
-    <p>Email:</p><input type="text">
-    <p>Contact details:</p><input type="text">
-    <p>Services intrested in: [Grooming, Training, Walking, Sitting, Transport, Other]</p><input type="text">
-    <p>Message/Enquire:</p><input type="text">
-    <!--submit button-->
-    <button style="display: block; margin: 20px auto;">Submit</button>
-   </main>
+    <meta name="description" content="Submit your enquiry to PetsOnTheGo regarding our pet services. Our team will respond promptly to assist with your pets' needs.">
+    <meta name="keywords" content="Pet Enquiry, Contact PetsOnTheGo, Pet Services">
+    <meta name="ST10467450" content="PetsOnTheGo">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="js/enquiry.js" defer></script>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="enquiry.html" class="active">Enquiry</a>
+    <a href="contact.html">Contacts</a>
+    <a href="services.html">Services</a>
+    <a href="animalbmi.html">BMI Calculator</a>
+</nav>
+
+<main style="text-align:center; margin-top:20px;">
+    <h1>Enquiry Form</h1>
+    <img src="images/dog3.jpg" alt="dog having a bath" width="50%">
+
+   <form id="enquiryForm" style="max-width:400px; margin:0 auto; text-align:left;">
+    <label for="ownerName">Name of the owner:</label>
+    <input type="text" id="ownerName" required style="width:100%; box-sizing:border-box;"><br><br>
+
+    <label for="petName">Name of the pet:</label>
+    <input type="text" id="petName" required style="width:100%; box-sizing:border-box;"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required style="width:100%; box-sizing:border-box;"><br><br>
+
+    <label for="contact">Contact details:</label>
+    <input type="text" id="contact" required style="width:100%; box-sizing:border-box;"><br><br>
+
+    <label for="service">Services interested in:</label>
+    <input type="text" id="service" required style="width:100%; box-sizing:border-box;"><br><br>
+
+    <label for="message">Message/Enquiry:</label>
+    <input type="text" id="message" style="width:100%; box-sizing:border-box;"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+    <!-- Dynamic message -->
+    <p id="formMessage" style="color:green; font-weight:bold; margin-top:15px;"></p>
+</main>
+
+</body>
 </html>
