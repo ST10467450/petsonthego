@@ -1,35 +1,120 @@
 <!DOCTYPE html>
-<html>
-   <nav>
-    <title>PETSONTHEGO | contacts</title>
-    <link rel="stylesheet" href="css/mystyle.css"
-   </nav>
-   <!--navigation bar-->
-   <a href="index.html">Home</a>
-        <a href="aboutus.html">About us</a>
-       <a href="enquiry.html">Enquiry</a>
-        <a href="contact.html">Contacts</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETSONTHEGO | Contacts</title>
+
+    <meta name="description" content="Get in touch with PetsOnTheGo. Contact our Johannesburg, Cape Town, or Durban offices for pet care services and enquiries.">
+    <meta name="keywords" content="PetsOnTheGo Contact, Pet Care Contact, Johannesburg, Cape Town, Durban">
+    <meta name="ST10467450" content="PetsOnTheGo">
+
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html" class="active">Contacts</a>
         <a href="services.html">Services</a>
-        <style>div{color: aquamarine;}</style>
-        
-        
-   <main>
-    <h1>contact information</h1>
-    <!--image-->
-    <img src="images/Goat.jpg" width="50%">
-    <!--companies contact information-->
-    <div class="contact-info">
-    <p><b>Head Office (Johannesburg)</b><p>
-    <p style="color: aquamarine;" ></p>Willow Park Road, Sandton,Johannesburg,2196 <br>27 11 345 6789 <br>
-    Joburg@Petsonthego.co.za </p>
-    <p><b>Branch (Cape Town):</b></p>
-    45 Marine Drive, Sea Point, Cape Town, 8005 <br>
-    +27 21 456 7890 <br>
-    Capetown@Petsonthego.co.za
-    <p><b>Branch (Durban):</b></p>
-    88 Palm Grove Road, Unhlanga, Durban, 4320 <br>
-    +27 31 567 8901 <br>
-    Durban@Petsonthego.co.za
-  </div>
-   </main>
+        <a href="animalbmi.html">BMI Calculator</a>
+    </nav>
+
+    <main>
+        <h1>Contact Information</h1>
+
+        <!-- Image -->
+        <img src="images/Goat.jpg" width="50%" alt="Goat in the field">
+
+        <!-- Company's Contact Information -->
+        <div class="contact-info">
+            <p><b>Head Office (Johannesburg)</b></p>
+            Willow Park Road, Sandton, Johannesburg, 2196 <br>
+            +27 11 345 6789 <br>
+            Joburg@Petsonthego.co.za <br><br>
+
+            <p><b>Branch (Cape Town):</b></p>
+            45 Marine Drive, Sea Point, Cape Town, 8005 <br>
+            +27 21 456 7890 <br>
+            Capetown@Petsonthego.co.za <br><br>
+
+            <p><b>Branch (Durban):</b></p>
+            88 Palm Grove Road, Umhlanga, Durban, 4320 <br>
+            +27 31 567 8901 <br>
+            Durban@Petsonthego.co.za
+        </div>
+
+        <hr>
+
+        <!-- REQUIRED CONTACT FORM (Q4.1) -->
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm" action="mailto:info@petsonthego.co.za" method="post" enctype="text/plain">
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required minlength="2"><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 0821234567"><br><br>
+
+            <label for="type">Type of Message:</label><br>
+            <select id="type" name="type" required>
+                <option value="">-- Select an option --</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Support Request">Support Request</option>
+            </select><br><br>
+
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="6" required minlength="10"></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="error" style="color:red; font-weight:bold;"></p>
+
+    </main>
+
+
+    <!-- JavaScript Validation + AJAX-style Submission -->
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // AJAX requirement
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let type = document.getElementById("type").value;
+        let message = document.getElementById("message").value.trim();
+        let error = document.getElementById("error");
+
+        // Validation
+        if (name === "" || email === "" || type === "" || message.length < 10) {
+            error.textContent = "Please complete all required fields correctly.";
+            return;
+        }
+
+        error.textContent = ""; // clear errors if valid
+
+        // Construct mailto link
+        window.location.href = 
+            "mailto:info@petsonthego.co.za"
+            + "?subject=" + encodeURIComponent(type)
+            + "&body=" + encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Message Type: " + type + "\n\n" +
+                "Message:\n" + message
+            );
+    });
+    </script>
+
+</body>
 </html>
