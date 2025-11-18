@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal BMI Calculator | PETSONTHEGO</title>
+    <meta name="description" content="Calculate your pet's BMI with the PetsOnTheGo Animal BMI Calculator. Supports dogs, cats, rabbits, horses, birds, and more.">
+    <meta name="keywords" content="Animal BMI, Pet BMI Calculator, Pet Health, Dog BMI, Cat BMI, Horse BMI">
+    <meta name="ST10467450" content="PetsOnTheGo">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="javascript/js/bmi.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+        <a href="animalbmi.html" class="active">BMI Calculator</a>
+    </nav>
+
+    <!--Animal BMI calculator-->
+    <h1>Animal BMI Calculator</h1>
+    <img src="images/dog4.jpg" alt="dog standing on a scale " width="30%">
+    <!--Animal selection-->
+    <form id="animalForm" style="margin-top:20px;">
+        <label>Select Animal Type:</label><br>
+        <select id="animalType">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="sheep">Sheep</option>
+            <option value="goat">Goat</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="horse">Horse</option>
+            <option value="cow">Cow</option>
+            <option value="bird">Bird</option>
+        </select><br><br>
+
+        <!--Form to input an animal's weight and height, and calculate its BMI.-->
+        <label>Animal Weight (kg):</label><br>
+        <input type="number" id="weight" required placeholder="Enter weight"><br><br>
+
+        <label>Animal Height (cm):</label><br>
+        <input type="number" id="height" required placeholder="Enter height"><br><br>
+
+        <button type="submit">Calculate BMI</button>
+    </form>
+       <!--box to display results for animal-->
+    <div id="resultBox" style="display:none; margin-top:20px;
+        background:#f0fff0; border:2px solid #4CAF50; padding:15px;
+        width:300px; border-radius:10px;">
+        <p id="result" style="margin:0;"></p>
+    </div>
+
+    <p id="error" style="color:red;"></p>
+
+</body>
+</html>
