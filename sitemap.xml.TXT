@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://petsonthego.local/index.html</loc>
+  </url>
+
+  <url>
+    <loc>https://petsonthego.local/aboutus.html</loc>
+  </url>
+
+  <url>
+    <loc>https://petsonthego.local/services.html</loc>
+  </url>
+
+  <url>
+    <loc>https://petsonthego.local/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://petsonthego.local/enquiry.html</loc>
+  </url>
+
+  <url>
+    <loc>https://petsonthego.local/animalbmi.html</loc>
+  </url>
+
+</urlset>
