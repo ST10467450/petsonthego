@@ -354,6 +354,7 @@ Changelog
 •	Improved responsive behavior.
 •	Added new image for animal BMI calculator 
 
+
 Refrence for image used on BMI calculator
 (Jirathanyakorn, 2024)
 
