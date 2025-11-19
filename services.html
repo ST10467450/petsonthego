@@ -39,4 +39,23 @@
         <div class="service-box">Pet Transport R250 per trip (pick-up & drop-off)</div>
         <div class="service-box">Pet Supplies Shop From R100 (food, toys, and accessories)</div>
     </div>
+ <!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img">
+</div>
 
+<!-- JAVASCRIPT FOR LIGHTBOX -->
+<script>
+    // Open lightbox when image is clicked
+    document.querySelectorAll("img").forEach(img => {
+        img.addEventListener("click", function () {
+            document.getElementById("lightbox-img").src = this.src;
+            document.getElementById("lightbox").style.display = "flex";
+        });
+    });
+
+    // Close when clicking outside the image
+    document.getElementById("lightbox").addEventListener("click", function () {
+        this.style.display = "none";
+    });
+</script>
